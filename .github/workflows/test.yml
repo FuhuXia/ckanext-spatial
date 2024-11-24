@@ -64,7 +64,8 @@ jobs:
 
     - name: Install dependencies (common)
       run: |
-        DEBIAN_FRONTEND=noninteractive apt-get --assume-yes --quiet install \
+        DEBIAN_FRONTEND=noninteractive apt-get update && \
+        apt-get --assume-yes --quiet install \
           python3-dev \
           libxml2-dev \
           libxslt1-dev \
